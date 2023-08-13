@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, sans-serif;
+	color: #f8edeb;
+}
+body{
+
+	display: flex ;
+	flex-direction: row;
+	/*background: url('img/DreamShaper_v7_background_of_cute_toys_white_and_black_minima_2.jpg');
+	background-size: 10%;*/
+	opacity: 90%;
+	background-color: #FFC6FF;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	max-width: 550px;
+	margin: 0 auto;
+}
+
+.contenedor-principal{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	background-color: #9381ff;
+	border-radius: 16%;
+	padding: 20px;
+}
+.titulo{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+}
+.titulo img{
+	width: 75px;
+	height: 65px;
+	
+}
+.contenedor{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: auto;
+	margin: 8px auto 20px;
+	
+
+}
+.contenedor-datos{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+h1{
+	margin: 16px auto;
+	font-size: 3em;
+	font-family: 'Cherry Bomb One', cursive;
+}
+.boton	{
+	background-color: #fafffd;
+	margin: 5px;
+	height: 80px;
+	width: 80px;
+	border-radius: 20%;
+	cursor: pointer;
+}
+.boton img{
+
+	width: 60px;
+}
+.boton:hover{
+	
+}
+.start{
+	margin: 8px;
+	border-radius: 16%;
+	padding: 12px;
+	color: black;
+	font-size: 2.5em;
+	font-family: 'Handjet', cursive;
+	cursor: pointer;
+}
+.start:hover{
+
+}
+p{
+	font-size: 2.5em;
+	font-family: 'Handjet', cursive;
+}
