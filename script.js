@@ -167,7 +167,7 @@ for(let i = 0; i < botones.length; i++){
 			botones[auxDos].removeAttribute('disabled', '');
 			botones[auxUno].children[0].setAttribute('src', 'img/back.png');
 			botones[auxDos].children[0].setAttribute('src', 'img/back.png');
-			},500);
+			},800);
 		}
 	}
 	})
