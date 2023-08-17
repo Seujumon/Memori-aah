@@ -28,6 +28,12 @@ let aciertos = 0;
 let intervalo;
 let tiempo;
 let arregloNumeros= ['1', '2', '3', '4', '5', '6' , '7' , '8', '9' , '10', '1', '2', '3', '4', '5', '6' , '7' , '8', '9' , '10'];
+function cargarImagenes(){
+	for(let i = 0; i<arregloNumeros.length; i++){
+		botones[0].children[0].setAttribute('src', `img/${arregloNumeros[i]}.png`);
+	}	
+	botones[0].children[0].setAttribute('src', `img/back.png`);
+}
 
 function recorrerCronometro(){
 
@@ -49,8 +55,7 @@ function recorrerCronometro(){
 
 	if(tiempo<0){
 		clearInterval(intervalo)
-		//sound.play();
-	}
+		}
 	
 	comprobarDerrota();
 	tiempo--;
@@ -69,7 +74,6 @@ function finDeJuego(){
 function comprobarVictoria(){
 	let vitoria = (botones.length/2) == aciertos;
 	if(vitoria){
-		//alert('gano');
 		resultado.innerText = 'Victori-aah';
 		clearInterval(intervalo);
 		soundVictory.play();
@@ -82,7 +86,6 @@ function comprobarDerrota(){
 	if (derrota) {
 		pCronometro.innerHTML = 'Tiempo: 00:00';
 		resultado.innerText= 'Derrot-aah';
-		//alert('perdio');
 		clearInterval(intervalo);
 		soundLose.play();
 		finDeJuego();
@@ -129,13 +132,13 @@ function iniciarJuego(){
 	tiempo = 89;
 }
 
+cargarImagenes();
 iniciarJuego();
 
 for(let i = 0; i < botones.length; i++){
 	botones[i].addEventListener('click', function(){
 		soundCheck.play(); 
 		const btn = document.getElementById(i);
-		console.log(botones[i].name);
 		btn.children[0].setAttribute('src', `img/${botones[i].name}.png`);
 		btn.setAttribute('disabled','');
 		guardarValor(botones[i].name);
